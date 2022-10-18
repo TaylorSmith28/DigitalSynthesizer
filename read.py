@@ -8,7 +8,7 @@ def read_state_diagram(input):
     return lines
 
 #input is lines of state diagram
-def read_num_signals(input):
+def read_signals(input):
     #Counters
     i = 0; j=0
     #List of signals
@@ -23,7 +23,7 @@ def read_num_signals(input):
             i=0
         if(j==len(input)):
             break
-    return len(signals)
+    return signals
 
 def read_truth_table(file):
     nullcontext

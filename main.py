@@ -9,7 +9,7 @@ from init import *
 #Current implementation is to read state_diagram_file and then reprint
 input = read_state_diagram('myfile.txt')
 num_of_states = len(input)
-num_of_signals = read_num_signals(input)
+num_of_signals = len(read_signals(input))
 
 #Initializing Truthtable
 truth_table = init_ttable(num_of_signals, num_of_states)
