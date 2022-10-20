@@ -47,5 +47,53 @@ def init_ttable(num_of_signals, num_of_states):
 def init_karnaugh_map():
     nullcontext
 
+#Header for truth table
+def init_header(ttable, signals, states):
+    i=0
+    full_states=[]
+    next_states=[]
+    while(i<len(states)):
+        full_states.append('q'+states[i])
+        next_states.append('d'+states[i])
+    full_states=full_states+next_states
+    return (signals + full_states)
+
+#for one hot
+#TODO:Implement logic change
+def update_ttable(state_machine, ttable, signals):
+    j=0
+    while(j<len(state_machine):
+        flag=0
+        dowhile(flag=0):
+            current_state = state_machine[j][0]
+            
+            #interpret next states
+            i=0
+            while(i<len(state_machine[j]):
+                if(state_machine[j][i].islower()):
+                    current_command = state_machine[j][i]
+                if(state_machine[j][i].isupper() & i!=0):
+                    current_end_state = state_machine[j][i]
+                if(state_machine[j][i]==','):
+                    #we have reached the end of a command, time to update ttable
+                    #need to find location of signal, current state, and next state
+                    #TODO: replaces ttable with header
+                    k=0
+                    while(k<len(header[0])):
+                        if(header[0][k]==current_command):
+                            com_locx=k
+                        elif(header[0][k]==current_state):
+                            cur_sta_locx=k
+                        elif(header[0][k]==current_end_state):
+                            cur_end_locx=k
+                    k=0
+                    #iterate over the entire current state
+                    while(k<2**len(signals)):
+                        
+            
+            if(state_machine[j][i]==';'):
+                #Go to next state
+                flag=1
+        j=j+1
 
 
